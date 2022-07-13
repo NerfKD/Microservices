@@ -22,7 +22,7 @@ namespace FreeCourse.Services.Discount.Services
         public async Task<Response<NoContent>> Delete(int id)
         {
             var deleteStatus = await _dbConnection.ExecuteAsync("delete from discount where id=@id", new { Id = id });
-            return deleteStatus > 0 ? Response<NoContent>.Success(204) : Response<NoContent>.Fail("discount not foun", 404);
+            return deleteStatus > 0 ? Response<NoContent>.Success(204) : Response<NoContent>.Fail("discount not found", 404);
         }
 
         public async Task<Response<List<Models.Discount>>> GetAll()
