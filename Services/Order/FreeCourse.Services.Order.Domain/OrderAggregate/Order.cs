@@ -12,6 +12,7 @@ namespace FreeCourse.Services.Order.Domain.OrderAggregate
         public DateTime CreatedDate { get; private set; }
         public Adress Adress { get; private set; }
         public string BuyerId { get; private set; }
+
         private readonly List<OrderItem> _orderItems;
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
