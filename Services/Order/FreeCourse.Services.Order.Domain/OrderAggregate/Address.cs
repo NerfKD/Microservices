@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Order.Domain.OrderAggregate
 {
-    public class Adress : ValueObject
+    public class Address : ValueObject
     {
         public string Province { get; private set; }
         public string District { get; private set; }
@@ -15,7 +15,7 @@ namespace FreeCourse.Services.Order.Domain.OrderAggregate
         public string ZipCode { get; private set; }
         public string Line { get; private set; }
 
-        public Adress(string province, string district, string street, string zipCode, string line)
+        public Address(string province, string district, string street, string zipCode, string line)
         {
             Province = province;
             District = district;

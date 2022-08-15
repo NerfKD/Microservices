@@ -10,17 +10,17 @@ namespace FreeCourse.Services.Order.Domain.OrderAggregate
     public class Order : Entity, IAggregateRoot
     {
         public DateTime CreatedDate { get; private set; }
-        public Adress Adress { get; private set; }
+        public Address Address { get; private set; }
         public string BuyerId { get; private set; }
 
         private readonly List<OrderItem> _orderItems;
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
-        public Order(Adress adress, string buyerId)
+        public Order(Address address, string buyerId)
         {
             _orderItems = new List<OrderItem>();
             CreatedDate = DateTime.Now;
-            Adress = adress;
+            Address = address;
             BuyerId = buyerId;
         }
 
